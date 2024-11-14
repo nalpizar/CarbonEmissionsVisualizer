@@ -1,0 +1,37 @@
+import { ChangeEvent, useCallback } from "react";
+import { useDeStates } from "../../../hooks/Co2MapDeHooks/useDeStates";
+export type StateFilterProps = {
+    selectedState: string;
+    onStateSelected: (selectedState: string) => void
+}
+export function StateFilter ({selectedState, onStateSelected}:StateFilterProps) {
+    const stateData = useDeStates();
+    const onSelectChange = useCallback((event:ChangeEvent<HTMLSelectElement>)=>{
+        const select = event.target;
+        const selectValue = select.value;
+
+        onStateSelected(selectValue);
+    },[onStateSelected]);
+    return (
+        <div>
+            <label htmlFor="states-select">States</label>
+            <select 
+                id="states-select"
+                onChange={onSelectChange}
+                value={selectedState ?? ''}
+                disabled={!!stateData.error || stateData.isLoading}>
+                <option value="" disabled>
+                    {stateData.error && 'we couldnt load the states'}
+                    {stateData.isLoading && 'loading states...'}
+                    {stateData.result && !stateData.result.length  && 'no states found'}
+                    {!stateData.error && !stateData.isLoading && stateData.result && stateData.result.length && 'select an state'}
+                </option>
+                {
+                    stateData.result?.map( code=> (
+                        <option value={code}>{code}</option>
+                    ))
+                }
+            </select>
+        </div>
+    );
+}
