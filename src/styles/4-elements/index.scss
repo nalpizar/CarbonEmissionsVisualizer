@@ -1,0 +1,13 @@
+/**
+ * Index SCSS File
+ * 
+ * This file consolidates and forwards various SCSS modules using the @forward directive.
+ * It includes base styles and typography styles.
+ * Using the @forward directive helps maintain a clean and modular structure for your styles.
+ */
+
+/* Forward base styles */
+@forward './base';
+
+/* Forward typography styles */
+@forward './typograpy';

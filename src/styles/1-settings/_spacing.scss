@@ -1,0 +1,12 @@
+/**
+ * Spacing Tokens
+ * 
+ * This file contains the design tokens related to spacing used throughout the application.
+ * These tokens include values for small, medium, and large spacing.
+ * Using design tokens helps maintain consistency and makes it easier to update styles globally.
+ */
+
+/* Spacing Tokens */
+$spacing-small: 8px;   /* Small spacing, typically used for minor gaps and padding */
+$spacing-medium: 16px; /* Medium spacing, typically used for standard gaps and padding */
+$spacing-large: 24px;  /* Large spacing, typically used for major gaps and padding */

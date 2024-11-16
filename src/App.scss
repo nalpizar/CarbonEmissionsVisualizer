@@ -1,0 +1,11 @@
+/**
+ * Main Application SCSS File
+ * 
+ * This file serves as the main entry point for all styles in the application.
+ * It imports the main SCSS file which consolidates various SCSS modules using the @use directive.
+ * The main SCSS file includes settings, tools, generic styles, element styles, object styles,
+ * component styles, and utility styles.
+ */
+
+/* Import the main SCSS file */
+@use './styles/main.scss' as *;

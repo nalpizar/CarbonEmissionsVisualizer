@@ -1,0 +1,9 @@
+/**
+ * Index SCSS File
+ * 
+ * This file consolidates and forwards various SCSS modules using the @forward directive.
+ * It includes layout styles to maintain a clean and modular structure for your styles.
+ */
+
+/* Forward layout styles */
+@forward './layout';

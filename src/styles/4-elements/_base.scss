@@ -1,0 +1,15 @@
+/**
+ * Base Styles
+ * 
+ * This file contains the base styles for the application, including global styles for the body element.
+ * It imports design tokens from the settings file to maintain consistency across the application.
+ */
+
+/* Import settings (design tokens) */
+@use '../1-settings/' as settings;
+
+/* Global styles for the body element */
+body {
+  background-color: settings.$background-color-cream-100; /* Set the background color using a design token */
+  font-family: settings.$font-family-primary; /* Set the font family using a design token */
+}

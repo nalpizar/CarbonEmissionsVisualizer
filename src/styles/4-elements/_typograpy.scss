@@ -1,0 +1,47 @@
+/* _typography.scss */
+
+/**
+ * Typography Styles
+ * 
+ * This file contains the typography styles for the application, including styles for headings, text, and links.
+ * It imports design tokens from the settings file to maintain consistency across the application.
+ */
+
+/* Import settings (design tokens) */
+@use '../1-settings/' as settings;
+
+/* Styles for heading level 1 */
+.plan-a-heading-1 {
+  letter-spacing: settings.$letter-spacing;
+  margin-bottom: 0;
+  font-size: settings.$font-size-large;
+  font-weight: settings.$font-weight-bold;
+  line-height: settings.$line-height;
+  color: settings.$color-dark-green;
+}
+
+/* Styles for heading level 2 */
+.plan-a-heading-2 {
+  font-size: settings.$font-size-medium;
+  color: settings.$color-dark-green;
+  margin-bottom: settings.$spacing-small;
+}
+
+/* Styles for text */
+.plan-a-text {
+  letter-spacing: -.6px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.42857;
+  margin: 0;
+}
+
+/* Styles for links */
+.plan-a-link {
+  color: settings.$color-link;
+  text-decoration: none;
+
+  &:hover {
+    color: settings.$color-link-hover;
+  }
+}

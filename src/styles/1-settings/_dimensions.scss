@@ -1,0 +1,12 @@
+/**
+ * Dimension Tokens
+ * 
+ * This file contains the design tokens related to dimensions used throughout the application.
+ * These tokens include width values that can be reused across different components and layouts.
+ * Using design tokens helps maintain consistency and makes it easier to update styles globally.
+ */
+
+/* Width Tokens */
+$width-200: 200px; /* Fixed width of 200 pixels */
+$full-width: 100%; /* Full width, typically used for elements that should span the entire width of their container */
+$half-width: 50%;  /* Half width, typically used for elements that should span half the width of their container */

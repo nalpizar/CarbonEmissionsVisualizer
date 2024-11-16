@@ -1,0 +1,19 @@
+/**
+ * Index SCSS File
+ * 
+ * This file consolidates and forwards various SCSS modules using the @forward directive.
+ * It includes design tokens related to colors, dimensions, fonts, and spacing.
+ * Using the @forward directive helps maintain a clean and modular structure for your styles.
+ */
+
+/* Forward color tokens */
+@forward './colors';
+
+/* Forward dimension tokens */
+@forward './dimensions';
+
+/* Forward font tokens */
+@forward './fonts';
+
+/* Forward spacing tokens */
+@forward './spacing';

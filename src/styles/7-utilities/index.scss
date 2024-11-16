@@ -1,0 +1,9 @@
+/**
+ * Index SCSS File
+ * 
+ * This file consolidates and imports various SCSS modules using the @use directive.
+ * It includes utility styles to maintain a clean and modular structure for your styles.
+ */
+
+/* Import utility styles */
+@use './utilities' as *;

@@ -1,0 +1,48 @@
+/* _layout.scss */
+
+/**
+ * Layout Styles
+ * 
+ * This file contains the layout styles for the application, including styles for wrappers and containers.
+ * It imports design tokens from the settings file and mixins from the tools file to maintain consistency across the application.
+ */
+
+/* Use explicit namespaces for each @use statement */
+@use '../1-settings/' as settings;
+@use '../2-tools' as tools;
+
+/* Styles for the main wrapper */
+.plan-a-wrapper {
+  min-height: 100vh;
+  padding: settings.$spacing-large;
+}
+
+/* Styles for the text wrapper inside the main wrapper */
+.plan-a-wrapper__text {
+  border-radius: 16px;
+  background-color: settings.$background-color-cream-200;
+  padding: 2.5rem;
+  margin: 30px 0;
+  width: settings.$full-width;
+}
+
+/* Styles for the logo container inside the main wrapper */
+.plan-a-logo__container {
+  margin-bottom: settings.$spacing-medium;
+}
+
+/* Styles for centering the main wrapper */
+.plan-a-wrapper--center {
+  @include tools.flex-container(
+    $direction: column,
+    $justify: center,
+    $align: center
+  );
+}
+
+/* Media query for medium screens */
+@include tools.media('medium') {
+  .plan-a-wrapper__text--medium {
+    width: settings.$half-width;
+  }
+}

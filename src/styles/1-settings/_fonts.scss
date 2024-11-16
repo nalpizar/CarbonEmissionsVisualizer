@@ -1,0 +1,28 @@
+/**
+ * Font Tokens
+ * 
+ * This file contains the design tokens related to typography used throughout the application.
+ * These tokens include font families, font weights, font sizes, line heights, and letter spacing.
+ * Using design tokens helps maintain consistency and makes it easier to update styles globally.
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* Font Family */
+$font-family-primary: "DM Sans", sans-serif; /* Primary font family used in the application */
+
+/* Font Weights */
+$font-weight-normal: 400; /* Normal font weight */
+$font-weight-bold: 700;   /* Bold font weight */
+
+/* Font Sizes */
+$font-size-large: 3.3rem;  /* Large font size, typically used for main headings */
+$font-size-medium: 1.5rem; /* Medium font size, typically used for subheadings */
+$font-size-small: 1rem;    /* Small font size, typically used for body text */
+
+/* Line Height */
+$line-height: 1.1; /* Line height for text, ensuring readability and spacing */
+
+/* Letter Spacing */
+$letter-spacing: -0.03em; /* Letter spacing for text, ensuring proper spacing between characters */

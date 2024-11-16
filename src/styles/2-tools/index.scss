@@ -1,0 +1,10 @@
+/**
+ * Index SCSS File
+ * 
+ * This file consolidates and forwards various SCSS modules using the @forward directive.
+ * It includes mixins that can be reused throughout the application.
+ * Using the @forward directive helps maintain a clean and modular structure for your styles.
+ */
+
+/* Forward mixins */
+@forward './mixins';

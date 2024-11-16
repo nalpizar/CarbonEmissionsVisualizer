@@ -1,0 +1,28 @@
+/**
+ * Main SCSS File
+ * 
+ * This file serves as the main entry point for all styles in the project.
+ * It imports various SCSS modules using the @use directive, each with an explicit namespace.
+ * The namespaces help avoid naming conflicts and make it clear where each style is coming from.
+ */
+
+/* Import settings (design tokens) */
+@use '1-settings' as settings;
+
+/* Import tools (mixins, functions) */
+@use '2-tools' as tools;
+
+/* Import generic styles (resets, normalize) */
+@use '3-generic' as generic;
+
+/* Import element styles (base styles for HTML elements) */
+@use '4-elements' as elements;
+
+/* Import object styles (layout, grid) */
+@use '5-objects' as objects;
+
+/* Import component styles (buttons, forms) */
+@use '6-components' as components;
+
+/* Import utility styles (modifiers, utility classes) */
+@use '7-utilities' as utilities;

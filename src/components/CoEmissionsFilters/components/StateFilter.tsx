@@ -13,10 +13,11 @@ export function StateFilter ({selectedState, onStateSelected}:StateFilterProps) 
         onStateSelected(selectValue);
     },[onStateSelected]);
     return (
-        <div>
-            <label htmlFor="states-select">States</label>
+        <div className="half--width">
+            <label htmlFor="states-select" hidden>States</label>
             <select 
                 id="states-select"
+                className="plan-a-select full--width"
                 onChange={onSelectChange}
                 value={selectedState ?? ''}
                 disabled={!!stateData.error || stateData.isLoading}>
@@ -24,7 +25,7 @@ export function StateFilter ({selectedState, onStateSelected}:StateFilterProps) 
                     {stateData.error && 'we couldnt load the states'}
                     {stateData.isLoading && 'loading states...'}
                     {stateData.result && !stateData.result.length  && 'no states found'}
-                    {!stateData.error && !stateData.isLoading && stateData.result && stateData.result.length && 'select an state'}
+                    {!stateData.error && !stateData.isLoading && stateData.result && stateData.result.length && 'Select an state'}
                 </option>
                 {
                     stateData.result?.map( code=> (

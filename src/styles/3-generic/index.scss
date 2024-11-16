@@ -1,0 +1,10 @@
+/**
+ * Index SCSS File
+ * 
+ * This file consolidates and imports various SCSS modules using the @use directive.
+ * It includes generic styles such as resets and normalization.
+ * Using the @use directive helps maintain a clean and modular structure for your styles.
+ */
+
+/* Import normalize styles */
+@use './normalize' as *;

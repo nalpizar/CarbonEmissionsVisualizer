@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react";
 import { StateFilter } from "./components/StateFilter";
-import { DateRangeFilter } from "./components/DateRangeFilter";
 import { Chart } from "./components/Chart";
 
 export function CoEmissionsFilters () {
@@ -14,9 +13,8 @@ export function CoEmissionsFilters () {
         }));
     },[]);
     return (
-        <div>
+        <div className="plan-a-wrapper--center">
             <StateFilter selectedState={filters.state} onStateSelected={onStateFilterChange} />
-            <DateRangeFilter/>
             <Chart selectedState={filters.state} />
         </div>
     );

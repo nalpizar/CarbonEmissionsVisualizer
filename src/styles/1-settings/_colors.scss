@@ -1,0 +1,26 @@
+/**
+ * Color Tokens
+ * 
+ * This file contains the design tokens related to colors used throughout the application.
+ * These tokens include primary, secondary, and background colors, as well as text and link colors.
+ * Using design tokens helps maintain consistency and makes it easier to update styles globally.
+ */
+
+/* Primary Colors */
+$color-dark-green: #002a16; /* Dark green color used for primary elements */
+$color-green: #007f42;      /* Green color used for primary elements */
+$color-medium-green: #009e5a; /* Medium green color used for secondary elements */
+$color-light-green: #00b36b;  /* Light green color used for secondary elements */
+$color-very-light-green: #00cc7a; /* Very light green color used for secondary elements */
+
+/* Background Colors */
+$color-background: #f7f4eb; /* Background color used for the main background */
+$background-color-cream-100: #f7f4eb; /* Light cream background color */
+$background-color-cream-200: #f2ebda; /* Darker cream background color */
+
+/* Text Colors */
+$color-text: #333333; /* Default text color */
+
+/* Link Colors */
+$color-link: #002a16; /* Link text color */
+$color-link-hover: #007f42; /* Link hover text color */

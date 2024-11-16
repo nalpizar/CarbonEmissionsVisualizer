@@ -1,0 +1,31 @@
+/* _utilities.scss */
+
+/**
+ * Utility Styles
+ * 
+ * This file contains utility styles and modifiers used throughout the application.
+ * It imports design tokens from the settings file to maintain consistency across the application.
+ */
+
+/* Import settings (design tokens) */
+@use '../1-settings/' as settings;
+
+/* Utility class for full width */
+.full--width {
+  width: settings.$full-width;
+}
+
+/* Utility class for half width */
+.half--width {
+  width: settings.$half-width;
+}
+
+/* Utility class for green font color */
+.plan-a-font--color-green {
+  color: settings.$color-green;
+}
+
+/* Utility class for fixed width of 200px */
+.width--200 {
+  width: settings.$width-200;
+}
