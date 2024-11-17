@@ -39,6 +39,7 @@ The following libraries where used for the solution.
 
 The project follows the ITCSS (Inverted Triangle CSS) architecture to organize styles. Here is an overview of the project structure:
 
+```bash
 src/
 ├── assets/                # Asset files such as images and icons
 │   ├── icons.scss         # SVG icons stored as data URLs
