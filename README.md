@@ -16,7 +16,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/plan-a.git
+   git clone https://github.com/nalpizar/code-challenge-plan-a.git
 2. Install the dependencies:
    ```bash
    npm install
