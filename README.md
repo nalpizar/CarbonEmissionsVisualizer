@@ -81,6 +81,7 @@ src/
 │   ├── main.scss          # Main SCSS file importing all styles
 ├── App.tsx                # Main application component
 ├── index.tsx              # Entry point for the React application
+```
 
 ## Task Requirements
 To create a single page dashboard that shows the Carbon intensity for a selected German federal state over a predefined date range, with the following requirements:
