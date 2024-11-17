@@ -37,15 +37,53 @@ The following libraries where used for the solution.
 
 ## Project Structure
 
-The project follows the ITCSS (Inverted Triangle CSS) architecture to organize styles. Here is an overview of the project structure:
+The project is organized into several key directories and files, each serving a specific purpose. Below is an overview of the main components, hooks, services, and styles used in the project.
+
+### Components
+
+- **Chart.tsx**: 
+  - A component that uses the Recharts library to display carbon intensity data in a chart format.
+  
+- **CoEmissionsFilters.tsx**: 
+  - A component that provides filtering options for carbon emissions data, allowing users to select different states and date ranges.
+  
+- **App.tsx**: 
+  - The main application component that serves as the root of the React component tree.
+  
+- **index.tsx**: 
+  - The entry point for the React application, where the ReactDOM renders the App component into the DOM.
+
+### Hooks
+
+- **useHistoricalIntensity.ts**: 
+  - A custom hook that fetches historical carbon intensity data for a selected state. It manages the loading state, error state, and the fetched data.
+  
+- **useDeStates.ts**: 
+  - A custom hook that fetches the states of Germany. It manages the loading state, error state, and the fetched data.
+
+### Services
+
+- **Co2MapDeService.ts**: 
+  - A service that provides methods for fetching carbon intensity data and states of Germany from the API. It abstracts the API calls and provides a clean interface for the rest of the application to use.
+
+### Styles
+
+The project follows the ITCSS (Inverted Triangle CSS) architecture to organize styles. This approach helps maintain a clean and modular structure for styles, making it easier to manage and scale the application.
+
+Here is an overview of the project structure:
 
 ```bash
 src/
 ├── assets/                # Asset files such as images and icons
 │   ├── icons.scss         # SVG icons stored as data URLs
 ├── components/            # React components
-│   ├── Chart.tsx          # Chart component
-│   ├── CoEmissionsFilters.tsx  # Filters component
+│   ├── Chart.tsx          # Chart component for displaying carbon intensity data
+│   ├── CoEmissionsFilters.tsx  # Component for filtering carbon emissions data
+│   ├── App.tsx            # Main application component
+│   ├── index.tsx          # Entry point for the React application
+├── hooks/                 # Custom React hooks
+│   ├── useHistoricalIntensity.ts # Hook for fetching historical carbon intensity data
+│   ├── useDeStates.ts     # Hook for fetching the states of Germany
 ├── services/              # Service files for API calls
 │   ├── Co2MapDeService.ts # Service for fetching carbon intensity data
 ├── styles/                # Styles organized using ITCSS architecture
@@ -79,8 +117,6 @@ src/
 │   │   ├── _utilities.scss # Utility classes
 │   │   ├── index.scss     # Consolidated utility styles
 │   ├── main.scss          # Main SCSS file importing all styles
-├── App.tsx                # Main application component
-├── index.tsx              # Entry point for the React application
 ```
 
 ## Task Requirements
