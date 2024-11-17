@@ -5,9 +5,18 @@
  * It includes styles for select elements to maintain consistency across the application.
  */
 
+ /* Import icons */
+@use '../1-settings/_icons' as icons;
+
 /* Styles for select elements */
 .plan-a-select {
+  background-image: icons.$icon-dropdown-arrow;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: calc(100% - 16px) center;
   border: 0; 
   border-radius: 16px; 
   padding: 16px; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

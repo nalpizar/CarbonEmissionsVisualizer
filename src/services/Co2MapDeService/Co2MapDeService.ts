@@ -26,7 +26,7 @@ export class Co2MapDeService {
     }  
     public async getProductionIntensityHistorical(state: string) : Promise<IntensityItem[]> {  
         try {
-            const start = '2024-11-01';
+            const start = '2024-02-01';
             const end = '2024-11-02';
             const response = await fetch (`https://api.co2map.de/ProductionIntensityHistorical/?state=${state}&country=DE&start=${start}&end=${end}`);
             const data = await response.json();
@@ -36,10 +36,15 @@ export class Co2MapDeService {
                 return [];
             }
             
+            const formatDate = (dateString: string): string => {
+                const options = { year: 'numeric' as const, month: 'short' as const, day: 'numeric' as const };
+                return new Date(dateString).toLocaleDateString(undefined, options);
+            };
+            
             const intensity: IntensityItem[] = results.map((item: [string, number]) => ({
-                date: item[0],
+                date: formatDate(item[0]),
                 intensity: item[1]
-            }));;
+            }));
         
             return intensity;
             
@@ -47,6 +52,5 @@ export class Co2MapDeService {
             console.error(error);
             throw error;
         }
-        return [];
     }
 }

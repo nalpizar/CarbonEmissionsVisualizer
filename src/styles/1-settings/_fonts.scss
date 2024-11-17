@@ -19,10 +19,16 @@ $font-weight-bold: 700;   /* Bold font weight */
 /* Font Sizes */
 $font-size-large: 3.3rem;  /* Large font size, typically used for main headings */
 $font-size-medium: 1.5rem; /* Medium font size, typically used for subheadings */
-$font-size-small: 1rem;    /* Small font size, typically used for body text */
+$font-size-small: 1rem; /* Small font size, typically used for body text */
+$font-size-text-big: 2rem;  /* Big font size, typically used for big text titles */
+
 
 /* Line Height */
-$line-height: 1.1; /* Line height for text, ensuring readability and spacing */
+/* Line height for text, ensuring readability and spacing */
+$line-height: 1.1; 
+$line-height-text: 1.42857;
 
 /* Letter Spacing */
-$letter-spacing: -0.03em; /* Letter spacing for text, ensuring proper spacing between characters */
+/* Letter spacing for text, ensuring proper spacing between characters */
+$letter-spacing: -0.03em; 
+$letter-spacing-text: -0.6px;

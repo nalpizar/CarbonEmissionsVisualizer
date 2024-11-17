@@ -26,6 +26,12 @@
   width: settings.$full-width;
 }
 
+.plan-a-wrapper__chart {
+  height: 400px;
+  width: calc(100vw - 48px);
+  padding: 24px;
+}
+
 /* Styles for the logo container inside the main wrapper */
 .plan-a-logo__container {
   margin-bottom: settings.$spacing-medium;
