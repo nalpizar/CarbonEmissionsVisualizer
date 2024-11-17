@@ -40,39 +40,46 @@ The following libraries where used for the solution.
 The project follows the ITCSS (Inverted Triangle CSS) architecture to organize styles. Here is an overview of the project structure:
 
 src/
-├── assets/
-│   ├── icons.scss
-├── styles/
-│   ├── 1-settings/
-│   │   ├── _colors.scss
-│   │   ├── _fonts.scss
-│   │   ├── _spacing.scss
-│   │   ├── _icons.scss
-│   │   ├── index.scss
-│   ├── 2-tools/
-│   │   ├── _mixins.scss
-│   │   ├── _functions.scss
-│   │   ├── index.scss
-│   ├── 3-generic/
-│   │   ├── _normalize.scss
-│   │   ├── index.scss
-│   ├── 4-elements/
-│   │   ├── _base.scss
-│   │   ├── _typography.scss
-│   │   ├── index.scss
-│   ├── 5-objects/
-│   │   ├── _layout.scss
-│   │   ├── _grid.scss
-│   │   ├── index.scss
-│   ├── 6-components/
-│   │   ├── _buttons.scss
-│   │   ├── _forms.scss
-│   │   ├── index.scss
-│   ├── 7-utilities/
-│   │   ├── _modifiers.scss
-│   │   ├── _utilities.scss
-│   │   ├── index.scss
-│   ├── main.scss
+├── assets/                # Asset files such as images and icons
+│   ├── icons.scss         # SVG icons stored as data URLs
+├── components/            # React components
+│   ├── Chart.tsx          # Chart component
+│   ├── CoEmissionsFilters.tsx  # Filters component
+├── services/              # Service files for API calls
+│   ├── Co2MapDeService.ts # Service for fetching carbon intensity data
+├── styles/                # Styles organized using ITCSS architecture
+│   ├── 1-settings/        # Global settings and design tokens
+│   │   ├── _colors.scss   # Color tokens
+│   │   ├── _fonts.scss    # Font tokens
+│   │   ├── _spacing.scss  # Spacing tokens
+│   │   ├── _icons.scss    # Icon tokens
+│   │   ├── index.scss     # Consolidated settings
+│   ├── 2-tools/           # Mixins and functions
+│   │   ├── _mixins.scss   # SCSS mixins
+│   │   ├── _functions.scss # SCSS functions
+│   │   ├── index.scss     # Consolidated tools
+│   ├── 3-generic/         # Generic styles (resets, normalize)
+│   │   ├── _normalize.scss # Normalize styles
+│   │   ├── index.scss     # Consolidated generic styles
+│   ├── 4-elements/        # Base styles for HTML elements
+│   │   ├── _base.scss     # Base element styles
+│   │   ├── _typography.scss # Typography styles
+│   │   ├── index.scss     # Consolidated element styles
+│   ├── 5-objects/         # Layout and grid styles
+│   │   ├── _layout.scss   # Layout styles
+│   │   ├── _grid.scss     # Grid styles
+│   │   ├── index.scss     # Consolidated object styles
+│   ├── 6-components/      # Component styles
+│   │   ├── _buttons.scss  # Button styles
+│   │   ├── _forms.scss    # Form styles
+│   │   ├── index.scss     # Consolidated component styles
+│   ├── 7-utilities/       # Utility and helper classes
+│   │   ├── _modifiers.scss # Modifier classes
+│   │   ├── _utilities.scss # Utility classes
+│   │   ├── index.scss     # Consolidated utility styles
+│   ├── main.scss          # Main SCSS file importing all styles
+├── App.tsx                # Main application component
+├── index.tsx              # Entry point for the React application
 
 ## Task Requirements
 To create a single page dashboard that shows the Carbon intensity for a selected German federal state over a predefined date range, with the following requirements:
