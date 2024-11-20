@@ -1,5 +1,5 @@
 import { ChangeEvent, useCallback } from "react";
-import { useDeStates } from "../../../hooks/Co2MapDeHooks/useDeStates";
+import { useDeStates } from "../hooks/Co2MapDeHooks/useDeStates";
 export type StateFilterProps = {
     selectedState: string;
     onStateSelected: (selectedState: string) => void
@@ -28,8 +28,8 @@ export function StateFilter ({selectedState, onStateSelected}:StateFilterProps) 
                     {!stateData.error && !stateData.isLoading && stateData.result && stateData.result.length && 'Select an state'}
                 </option>
                 {
-                    stateData.result?.map( code=> (
-                        <option value={code}>{code}</option>
+                    stateData.result?.map( stateCode=> (
+                        <option value={stateCode} key={stateCode}>{stateCode}</option>
                     ))
                 }
             </select>

@@ -1,11 +1,12 @@
 import { useCallback, useState } from "react";
-import { StateFilter } from "./components/StateFilter";
-import { Chart } from "./components/Chart";
+import { StateFilter } from "./StateFilter";
+import { Chart } from "./Chart";
 
-export function CoEmissionsFilters () {
+export function CoEmissions () {
     const [filters, setFilters] = useState({
         state: ''
     });
+    // Catch the state change event from the StateFilter component and update the state filter in the CoEmissions component.
     const onStateFilterChange = useCallback((newState: string)=>{
         setFilters(current => ({
             ...current,

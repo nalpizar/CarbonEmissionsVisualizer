@@ -1,4 +1,4 @@
-import IntensityItem from "./models/IntensityItem";
+import type { IntensityResponse, IntensityData } from "./models/IntensityResponse";
 import type { StateResponse } from "./models/StateResponse";
 
 export class Co2MapDeService {
@@ -24,12 +24,13 @@ export class Co2MapDeService {
             throw error;
         }
     }  
-    public async getProductionIntensityHistorical(state: string) : Promise<IntensityItem[]> {  
+    public async getProductionIntensityHistorical(state: string) : Promise<IntensityData[]> {  
         try {
             const start = '2024-02-01';
             const end = '2024-11-02';
             const response = await fetch (`https://api.co2map.de/ProductionIntensityHistorical/?state=${state}&country=DE&start=${start}&end=${end}`);
-            const data = await response.json();
+            // cambiar a type
+            const data: IntensityResponse = await response.json();
             const results = data["Production-based Intensity (historical)"];
 
             if (!results) {
@@ -40,12 +41,12 @@ export class Co2MapDeService {
                 const options = { year: 'numeric' as const, month: 'short' as const, day: 'numeric' as const };
                 return new Date(dateString).toLocaleDateString(undefined, options);
             };
-            
-            const intensity: IntensityItem[] = results.map((item: [string, number]) => ({
-                date: formatDate(item[0]),
-                intensity: item[1]
+
+            const intensity: IntensityData[] = results.map(([date, intensity]) => ({
+                date: formatDate(date),
+                intensity: intensity
             }));
-        
+
             return intensity;
             
         } catch (error) {

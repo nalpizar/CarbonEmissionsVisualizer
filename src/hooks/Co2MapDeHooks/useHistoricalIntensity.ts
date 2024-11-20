@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { IntensityData } from "../../services/Co2MapDeService/models/IntensityResponse"; 
 import { AsyncState } from "../AsyncState";
 import { Co2MapDeService } from "../../services/Co2MapDeService/Co2MapDeService";
-import IntensityItem from "../../services/Co2MapDeService/models/IntensityItem";
 
-export function useHistoricalIntensity( selectedState: string) : AsyncState <IntensityItem[]> {
-    const [state, setState] = useState<AsyncState<IntensityItem[]>>({
+export function useHistoricalIntensity( selectedState: string) : AsyncState <IntensityData[]> {
+    const [intensityItems, setIntensityItems] = useState<AsyncState<IntensityData[]>>({
         isLoading: true,
         error: null,
         result: null
@@ -14,7 +14,7 @@ export function useHistoricalIntensity( selectedState: string) : AsyncState <Int
         // Check if selectedState is empty or null
         if (!selectedState) {
           // If selectedState is empty, reset the state
-          setState({
+          setIntensityItems({
             isLoading: false, // Set isLoading to false as there is no data to fetch
             error: null,      // Reset error to null
             result: null,     // Reset result to null
@@ -23,7 +23,7 @@ export function useHistoricalIntensity( selectedState: string) : AsyncState <Int
         }
 
         // If selectedState is not empty, update the state to indicate loading
-        setState((current) => ({
+        setIntensityItems((current) => ({
           ...current,         // Preserve the current state
           isLoading: true,    // Set isLoading to true to indicate data fetching
           error: null,        // Reset error to null
@@ -33,24 +33,24 @@ export function useHistoricalIntensity( selectedState: string) : AsyncState <Int
         service
           .getProductionIntensityHistorical(selectedState)
           .then((intensity) => {
-            setState((current) => ({
+            setIntensityItems((current) => ({
               ...current,
               result: intensity,
             }));
           })
           .catch((error) => {
-            setState((current) => ({
+            setIntensityItems((current) => ({
               ...current,
               error: error,
             }));
           })
           .finally(() => {
-            setState((current) => ({
+            setIntensityItems((current) => ({
               ...current,
               isLoading: false,
             }));
           });
       }, [selectedState]);
 
-    return state;
+    return intensityItems;
 }
