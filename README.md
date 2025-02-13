@@ -11,7 +11,6 @@ helping users understand and address climate change.
 - [Usage](#usage)
 - [Libraries](#libraries)
 - [Project Structure](#project-structure)
-- [Task Requeriments](#task-requirements)
 
 ## Installation
 
