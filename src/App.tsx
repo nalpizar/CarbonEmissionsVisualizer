@@ -1,18 +1,15 @@
-import './App.scss'
-import { Fragment } from 'react/jsx-runtime'
-import { CoEmissions } from './components/CoEmissions'
-import { Header } from './components/Header'
+import "./App.scss";
+import { Fragment } from "react/jsx-runtime";
+import { CoEmissions } from "./components/CoEmissions";
+import { Header } from "./components/Header";
 
 export function App() {
-
   return (
-      
-   <Fragment>
-    <div className='plan-a-wrapper plan-a-wrapper--center'>
-      <Header/>
-      <CoEmissions/>
-    </div>
-    
-   </Fragment>
-  )
+    <Fragment>
+      <div className="wrapper wrapper--center">
+        <Header />
+        <CoEmissions />
+      </div>
+    </Fragment>
+  );
 }

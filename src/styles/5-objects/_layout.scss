@@ -8,17 +8,17 @@
  */
 
 /* Use explicit namespaces for each @use statement */
-@use '../1-settings/' as settings;
-@use '../2-tools' as tools;
+@use "../1-settings/" as settings;
+@use "../2-tools" as tools;
 
 /* Styles for the main wrapper */
-.plan-a-wrapper {
+.wrapper {
   min-height: 100vh;
   padding: settings.$spacing-large;
 }
 
 /* Styles for the text wrapper inside the main wrapper */
-.plan-a-wrapper__text {
+.wrapper__text {
   border-radius: 16px;
   background-color: settings.$background-color-cream-200;
   padding: 2.5rem;
@@ -26,19 +26,14 @@
   width: settings.$full-width;
 }
 
-.plan-a-wrapper__chart {
+.wrapper__chart {
   height: 400px;
   width: calc(100vw - 48px);
   padding: 24px;
 }
 
-/* Styles for the logo container inside the main wrapper */
-.plan-a-logo__container {
-  margin-bottom: settings.$spacing-medium;
-}
-
 /* Styles for centering the main wrapper */
-.plan-a-wrapper--center {
+.wrapper--center {
   @include tools.flex-container(
     $direction: column,
     $justify: center,
@@ -47,8 +42,8 @@
 }
 
 /* Media query for medium screens */
-@include tools.media('medium') {
-  .plan-a-wrapper__text--medium {
+@include tools.media("medium") {
+  .wrapper__text--medium {
     width: settings.$half-width;
   }
 }

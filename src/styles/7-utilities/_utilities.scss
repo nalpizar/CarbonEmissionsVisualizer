@@ -8,7 +8,7 @@
  */
 
 /* Import settings (design tokens) */
-@use '../1-settings/' as settings;
+@use "../1-settings/" as settings;
 
 /* Utility class for full width */
 .full--width {
@@ -21,7 +21,7 @@
 }
 
 /* Utility class for green font color */
-.plan-a-font--color-green {
+.font--color-green {
   color: settings.$color-green;
 }
 

@@ -6,10 +6,10 @@
  */
 
 /* Import settings (design tokens) */
-@use '../1-settings/' as settings;
+@use "../1-settings/" as settings;
 
 /* Styles for heading level 1 */
-.plan-a-heading-1 {
+.heading-1 {
   letter-spacing: settings.$letter-spacing;
   margin-bottom: 0;
   font-size: settings.$font-size-large;
@@ -19,14 +19,14 @@
 }
 
 /* Styles for heading level 2 */
-.plan-a-heading-2 {
+.heading-2 {
   font-size: settings.$font-size-medium;
   color: settings.$color-dark-green;
   margin-bottom: settings.$spacing-small;
 }
 
 /* Styles for text */
-.plan-a-text {
+.text {
   letter-spacing: settings.$letter-spacing-text;
   font-size: settings.$font-size-small;
   font-weight: settings.$font-weight-normal;
@@ -34,7 +34,7 @@
   margin: 0;
 }
 
-.plan-a-text--bold {
+.text--bold {
   letter-spacing: settings.$letter-spacing;
   margin: settings.$spacing-large 0;
   font-size: settings.$font-size-text-big;
@@ -45,7 +45,7 @@
 }
 
 /* Styles for links */
-.plan-a-link {
+.link {
   color: settings.$color-link;
   text-decoration: none;
 

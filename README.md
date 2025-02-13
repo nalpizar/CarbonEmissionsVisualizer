@@ -1,7 +1,9 @@
-# Plan A
+# Carbon Emissions Visualization
 
-Plan A helps companies monitor, reduce, and offset their carbon footprint, based on the data they input about their emissions. Though this gives individual companies visibility
-on their own emissions, it doesn't give us a clear idea on our progress on a regional level. This task addresses the other side of the problem; using consumption and production data on a federal state level to estimate the amount of GHG emissions over time.
+This project visualizes carbon emissions data for Germany's
+federal states using interactive graphs. It aims to provide
+clear insights into the environmental impact of each state,
+helping users understand and address climate change.
 
 ## Table of Contents
 
@@ -18,15 +20,18 @@ To get started with the project, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/nalpizar/code-challenge-plan-a.git
+   ```
 2. Install the dependencies:
    ```bash
    npm install
+   ```
 
 ## Usage
 
 1. To run the application locally, use the following command:
    ```bash
    npm run dev
+   ```
 
 ## Libraries
 
@@ -34,7 +39,7 @@ The following libraries where used for the solution.
 
 - [react](https://reactjs.org/)
 - [typescript](https://www.typescriptlang.org/)
-- [recharts](https://recharts.org/en-US/)   
+- [recharts](https://recharts.org/en-US/)
 
 ## Project Structure
 
@@ -42,29 +47,25 @@ The project is organized into several key directories and files, each serving a 
 
 ### Components
 
-- **Chart.tsx**: 
+- **Chart.tsx**:
   - A component that uses the Recharts library to display carbon intensity data in a chart format.
-  
-- **CoEmissionsFilters.tsx**: 
+- **CoEmissionsFilters.tsx**:
   - A component that provides filtering options for carbon emissions data, allowing users to select different states and date ranges.
-  
-- **App.tsx**: 
+- **App.tsx**:
   - The main application component that serves as the root of the React component tree.
-  
-- **index.tsx**: 
+- **index.tsx**:
   - The entry point for the React application, where the ReactDOM renders the App component into the DOM.
 
 ### Hooks
 
-- **useHistoricalIntensity.ts**: 
+- **useHistoricalIntensity.ts**:
   - A custom hook that fetches historical carbon intensity data for a selected state. It manages the loading state, error state, and the fetched data.
-  
-- **useDeStates.ts**: 
+- **useDeStates.ts**:
   - A custom hook that fetches the states of Germany. It manages the loading state, error state, and the fetched data.
 
 ### Services
 
-- **Co2MapDeService.ts**: 
+- **Co2MapDeService.ts**:
   - A service that provides methods for fetching carbon intensity data and states of Germany from the API. It abstracts the API calls and provides a clean interface for the rest of the application to use.
 
 ### Styles
@@ -119,16 +120,3 @@ src/
 │   │   ├── index.scss     # Consolidated utility styles
 │   ├── main.scss          # Main SCSS file importing all styles
 ```
-
-## Task Requirements
-To create a single page dashboard that shows the Carbon intensity for a selected German federal state over a predefined date range, with the following requirements:
-
-The user should be able to select a German federal state. Please use this API to source the Carbon intensity data: [https://api.co2map.de/docs#/](https://api.co2map.de/docs#/)
-
-Additionally, the following information should be displayed on the page
-
-- Plan A logo
-- The provided description
-- The selected federal state
-- The start (2019-02-01) and end date (2022-06-15)
-- A chart (using the Recharts library)
